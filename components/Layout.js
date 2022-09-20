@@ -16,6 +16,7 @@ export default function Layout({ children }) {
           color: #333;
           font-family: sans-serif;
           background: #101010 !important;
+          overflow-x: hidden;
         }
         body::before {
             animation: grain 8s steps(10) infinite;
@@ -71,29 +72,83 @@ export default function Layout({ children }) {
           font-family: 'Creepster', cursive;
         }
         .desktop{
-          background-image: url("./picture/backgroundw.png");
-          background-size: cover;
+          background-image: url("./picture/desktopright.png");
           background-repeat: no-repeat;
-          background-position: top;
+          background-size: 35%;
+          background-position: top right;
           position: absolute;
-          height: 100vh;
+          height: 100%;
           width: 100%;
           top: 0;
           left: 0;
           z-index: -1;
+          overflow: hidden;
         }
-        .mobile{
-          background-image: url("./picture/backgroundwmobile.png");
-          background-size: cover;
+        .deskbottomright{
+          background-image: url("./picture/deskbottomright.png");
           background-repeat: no-repeat;
+          background-size: 27%;
+          background-position: bottom right;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          bottom: 31%;
+          right: 0;
+          z-index: -1;
+        }
+        .deskbottomleft{
+          background-image: url("./picture/deskbottomleft.png");
+          background-repeat: no-repeat;
+          background-size: 37%;
+          background-position: bottom left;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          bottom: 31%;
+          left: 0;
+          z-index: -1;
+        }
+        .mobiletop{
+          background-image: url("./picture/mobiletop.png");
+          background-repeat: no-repeat;
+          background-size: 30%;
+          background-position: top right;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          right: 0;
+          z-index: -1;
+        }
+        .mobilemiddle{
+          background-image: url("./picture/mobilemiddle.png");
+          background-repeat: no-repeat;
+          background-size: 50%;
           background-position: top;
           position: absolute;
           height: 100vh;
           width: 100%;
-          top: 0;
-          left: 0;
+          top: 45.5%;
+          left: 53%;
+          transform: translate(-50%, -50%);
           z-index: -1;
         }
+       
+        .mobilebottom{
+          background-image: url("./picture/mobilebottom.png");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: bottom;
+          position: absolute;
+          height: 100vh;
+          width: 100%;
+          bottom: 0;
+          left: 48%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+
+        }
+
         .happy{
           color: #D77400 !important;
         }

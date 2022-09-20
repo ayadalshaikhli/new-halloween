@@ -159,7 +159,21 @@ export default function ProductForm({ product }) {
           onClick={() => {
             addToCart(selectedVariant);
           }}
-          className="flex bg-black w-full fixed bottom-0 left-0 justify-center  py-5 sm:text-center  sm:rounded-lg z-10  sm:sticky  text-white sm:px-2 sm:py-3 sm:mt-3 hover:bg-gray-800"
+          className="flex w-full rounded-md bg-green-500 mt-2  justify-center  py-5   z-50    text-white  hover:text-white hover:bg-green-800"
+        >
+          Add To Card
+        </button>
+      ) : (
+        <button className="rounded-lg text-white px-2 py-3 mt-3 bg-gray-800 cursor-not-allowed">
+          Sold out!
+        </button>
+      )}
+      {available ? (
+        <button
+          onClick={() => {
+            addToCart(selectedVariant);
+          }}
+          className="flex rounded-full px-1 py-1   bg-green-500 w-1/4 fixed bottom-2 right-0 justify-center sm:bottom-4 sm:w-1/6   sm:text-center  sm:rounded-lg z-50    text-white sm:px-2 sm:py-3 sm:mt-3 hover:text-white hover:bg-green-600"
         >
           Add To Card
         </button>

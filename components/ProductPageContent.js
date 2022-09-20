@@ -55,7 +55,7 @@ export default function ProductPageContent({ product }) {
           
           className="dis z-40 colornav"
         >
-          <p className=" mt-10 p-10 relative space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl rounder-md border-2 w-11/12 mx-auto text-white colornav z-40 ">
+          <p className=" mt-10 p-10 relative space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl rounder-md border-2 w-11/12 mx-auto text-white colornav z-20 ">
             {product.description}
           </p>
         </div>

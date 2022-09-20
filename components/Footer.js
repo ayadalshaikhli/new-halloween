@@ -23,7 +23,7 @@ export default function Footer() {
     setShowMe2(!showMe2);
   }
   return (
-    <div className="md:flex relative text-white justify-around p-10 z-50 foot">
+    <div className="md:flex relative text-white justify-around p-10 z-40 foot">
       <div>
         <button
           onClick={toggle}

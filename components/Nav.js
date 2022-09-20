@@ -28,24 +28,25 @@ export default function Nav() {
     var free = "You're only" + " $" + shippingaway + " from free shipping";
   }
 
-  // useEffect(() => {
-  //   const showAnim = gsap
-  //     .from(".nav-main", {
-  //       yPercent: -200,
-  //       paused: true,
-  //       duration: 0.2,
-  //     })
-  //     .progress(1);
+  useEffect(() => {
+    
 
-  //   ScrollTrigger.create({
-  //     start: "top top",
-  //     end: 99999,
+    const showAnim = gsap
+      .from(".nav-main", {
+        yPercent: -200,
+        paused: true,
+        duration: 0.2,
+      })
+      .progress(1);
 
-  //     onUpdate: (self) => {
-  //       self.direction === -1 ? showAnim.play() : showAnim.reverse();
-  //     },
-  //   });
-  // });
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse();
+      },
+    });
+  });
 
   return (
     <header className="fixed bg-transparent w-full colornav text-white  max-w-xl mx-auto pt-5   2xl:max-w-full 2xl:px-8 z-50 font-black ">
