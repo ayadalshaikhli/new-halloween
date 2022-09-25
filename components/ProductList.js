@@ -50,12 +50,12 @@ const ProductList = ({ products }) => {
   return (
     <div style={{
       
-    }} id="body" className="relative product-list px-10 ">
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8 ">
+    }} id="body" className="relative product-list px-2 ">
+      <div className="max-w-2xl mx-auto py-16  sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8 ">
         <h1  className="text-2xl py-2  font-extrabold happy">
           Most Popular
         </h1>
-        <div className="grid grid-cols-2  gap-y-50 gap-x-2 lg:even:grid-cols-4 lg:odd:grid-cols-2  xl:gap-2">
+        <div className="grid grid-cols-2  gap-y-50 gap-x-1 lg:even:grid-cols-4 lg:odd:grid-cols-2  xl:gap-2">
           {products.map((product) => (
             <ProductCard key={product.node.id} product={product} />
           ))}

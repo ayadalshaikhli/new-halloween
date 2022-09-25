@@ -29,8 +29,6 @@ export default function Nav() {
   }
 
   useEffect(() => {
-    
-
     const showAnim = gsap
       .from(".nav-main", {
         yPercent: -200,
@@ -50,24 +48,29 @@ export default function Nav() {
 
   return (
     <header className="fixed bg-transparent w-full colornav text-white  max-w-xl mx-auto pt-5   2xl:max-w-full 2xl:px-8 z-50 font-black ">
+       <div className="shipping text-center">
+        <h1>
+          {free} {Good}
+        </h1>
+      </div>
       <div className="nav-main justify-center  flex flex-col sm:flex-row   text-center items-center">
         <div className="nav-pages text-center sm:pl-96   md:pl-0  flex md:gap-x-2 uppercase ">
           <div>
-            <Link href="/collections/body">
+            <Link href="/">
               <a className="cursor-pointer">
                 <span className="md:text-3xl  px-2  sm:px-4">Home</span>
               </a>
             </Link>
           </div>
           <div>
-            <Link href="/collections/sunglasses-1">
+            <Link href="/info/about">
               <a className="cursor-pointer ">
                 <span className="md:text-3xl  px-2  sm:px-4">About</span>
               </a>
             </Link>
           </div>
           <div>
-            <Link href="/collections/earrings">
+            <Link href="/info/contact">
               <a className="cursor-pointer ">
                 <span className="md:text-3xl  px-2  sm:px-4">Contact</span>
               </a>

@@ -92,7 +92,7 @@ export default function Layout({ children }) {
           position: absolute;
           height: 100%;
           width: 100%;
-          bottom: 31%;
+          bottom: 0;
           right: 0;
           z-index: -1;
         }
@@ -104,7 +104,7 @@ export default function Layout({ children }) {
           position: absolute;
           height: 100%;
           width: 100%;
-          bottom: 31%;
+          bottom: 0;
           left: 0;
           z-index: -1;
         }
@@ -128,8 +128,8 @@ export default function Layout({ children }) {
           position: absolute;
           height: 100vh;
           width: 100%;
-          top: 45.5%;
-          left: 53%;
+          top: 70%;
+          left: 60%;
           transform: translate(-50%, -50%);
           z-index: -1;
         }
@@ -143,14 +143,21 @@ export default function Layout({ children }) {
           height: 100vh;
           width: 100%;
           bottom: 0;
-          left: 48%;
-          transform: translate(-50%, -50%);
+          left: 0;
           z-index: -1;
 
         }
 
         .happy{
           color: #D77400 !important;
+        }
+        .happy-halloween{
+          color: #D77400 !important;
+          position: absolute;
+          top: 45%;
+          left: 55%;
+          transform: translate(-50%, -50%);
+
         }
      
       `}</style>

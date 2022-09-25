@@ -23,33 +23,7 @@ export default function Footer() {
     setShowMe2(!showMe2);
   }
   return (
-    <div className="md:flex relative text-white justify-around p-10 z-40 foot">
-      <div>
-        <button
-          onClick={toggle}
-          className="md:hidden flex justify-between w-full items-center border-b-2 border-gray-500 py-3"
-        >
-          My Acoount <FaPlus />
-        </button>
-        <div
-          style={{
-            display: showMe ? "block" : "none",
-          }}
-          className="md:hidden"
-        >
-          <h1 className="flex justify-between items-center">
-            Sign in <FaAngleRight />
-          </h1>
-          <h1 className="flex justify-between items-center">
-            Register <FaAngleRight />
-          </h1>
-        </div>
-        <div className="hidden md:block">My Acoount</div>
-        <div className="hidden md:block">
-          <h1>Sign in</h1>
-          <h1>Register</h1>
-        </div>
-      </div>
+    <div className="md:flex relative text-white justify-around p-10 z-20 foot">
       <div>
         <button
           onClick={toggle1}
@@ -88,52 +62,6 @@ export default function Footer() {
           <h1>Countries</h1>
         </div>
       </div>
-      <div>
-        <div>
-          <button
-            onClick={toggle2}
-            className="md:hidden flex justify-between w-full items-center border-b-2 border-gray-500 py-3"
-          >
-            Products <FaPlus />
-          </button>
-          <div
-            style={{
-              display: showMe2 ? "block" : "none",
-            }}
-            className="md:hidden"
-          >
-            <h1 className="flex justify-between items-center">
-              Mobile top-up
-              <FaAngleRight />
-            </h1>
-            <h1 className="flex justify-between items-center">
-              Entertainment
-              <FaAngleRight />
-            </h1>
-            <h1 className="flex justify-between items-center">
-              Shopping
-              <FaAngleRight />
-            </h1>
-            <h1 className="flex justify-between items-center">
-              Gaming
-              <FaAngleRight />
-            </h1>
-            <h1 className="flex justify-between items-center">
-              Prepaid credit cards
-              <FaAngleRight />
-            </h1>
-          </div>
-          <div className="hidden md:block">Products</div>
-          <div className="hidden md:block">
-            <h1>Mobile top-up</h1>
-            <h1>Entertainment</h1>
-            <h1>Shopping</h1>
-            <h1>Gaming</h1>
-            <h1>Prepaid credit cards</h1>
-          </div>
-        </div>
-      </div>
-      <div className="text-center">Great</div>
     </div>
   );
 }

@@ -12,6 +12,15 @@ import {
   FaStar,
   FaStarHalf,
 } from "react-icons/fa";
+import { gsap, Expo } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+
+
+
 var random = Math.floor(Math.random() * 20 + 10);
 var round = Math.round(random);
 // setup inventory fetcher
@@ -112,35 +121,54 @@ export default function ProductForm({ product }) {
   const priceSaving = compare - price;
   const saving = ((compare - price) / compare) * 100;
   const roundv2 = Math.round(saving);
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: ".trigger-me",
+      start: "top 80%",
+      end: "bottom 20%",
+      onEnter: () => {
+        gsap.to(".extra-add-to-cart", {
+          opacity: 1,
+          ease: Expo.easeOut,
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to(".extra-add-to-cart", {
+          opacity: 0,
+          ease: Expo.easeOut,
+        });
+      },
+    });
+  
+  }, []);
 
   return (
     <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3 bg-white text-black  z-40">
-      <div className="text-sm font-thin flex align-bottom">
-        {round} sales |
-        <div className="flex align-bottom pt-1 pl-2=">
+      {/* <div className="text-sm font-thin flex align-bottom text-green-500">
+        {round} sold |
+        <div className="flex align-bottom pt-1 pl-2 happy">
           <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalf />
         </div>
-      </div>
-      <h2 className="text-2xl font-bold uppercase">{product.title}</h2>
-      <div className="flex pt-2 text-xl justify-between">
-        <div>
-          <span className="pb-3 pr-5 line-through text-red-700">
+      </div> */}
+      <h2 className="text-xl font-bold uppercase">{product.title}</h2>
+      <div className="flex pt-2 text-md justify-between ">
+        <div> 
+          <span className=" pr-5 line-through ">
             {formatter.format(
               product.variants.edges[0].node.compareAtPriceV2.amount
             )}
           </span>
-          <span className="pb-3">
-            {formatter.format(product.variants.edges[0].node.priceV2.amount)}
+          <span className="py-1 px-2 bg-black text-white">
+          -%{roundv2} {formatter.format(product.variants.edges[0].node.priceV2.amount)} 
           </span>
         </div>
         <div className="text-md text-red-600">
           <span>Low in stock</span>
         </div>
       </div>
-      <span className="text-green-500 text-sm">
+      {/* <span className="text-green-500 text-sm">
         You save {formatter.format(priceSaving)} %{roundv2}
-      </span>
-
+      </span> */}
       {product.options.map(({ name, values }) => (
         <ProductOptions
           key={`key-${name}`}
@@ -153,7 +181,6 @@ export default function ProductForm({ product }) {
           available={available}
         />
       ))}
-
       {available ? (
         <button
           onClick={() => {
@@ -168,12 +195,13 @@ export default function ProductForm({ product }) {
           Sold out!
         </button>
       )}
+      <div className="extra-add-to-cart opacity-0">
       {available ? (
         <button
           onClick={() => {
             addToCart(selectedVariant);
           }}
-          className="flex rounded-full px-1 py-1   bg-green-500 w-1/4 fixed bottom-2 right-0 justify-center sm:bottom-4 sm:w-1/6   sm:text-center  sm:rounded-lg z-50    text-white sm:px-2 sm:py-3 sm:mt-3 hover:text-white hover:bg-green-600"
+          className="flex font-sm px-1 py-1 bg-green-500 w-full fixed bottom-0 right-0 justify-center sm:bottom-4 sm:w-1/6 sm:text-center  sm:rounded-lg z-50 text-white sm:px-2 sm:py-3 sm:mt-3 hover:text-white hover:bg-green-600"
         >
           Add To Card
         </button>
@@ -182,7 +210,8 @@ export default function ProductForm({ product }) {
           Sold out!
         </button>
       )}
-      <div className="max-h-94 max-w-94 py-4">
+      </div>
+      <div className="max-h-94 max-w-94 py-2">
         <Image
           src={payment}
           alt="payment methods"
@@ -191,15 +220,17 @@ export default function ProductForm({ product }) {
           quality={100}
         />
       </div>
+      <div>
       <div className="flex py-2">
-        <FaStopwatch20 size="1.5rem" />
-        <span className="pl-2">
+        <FaStopwatch20 size="2.5rem" />
+        <span className="pl-2 trigger-me">
           Selling fast! Only 8 left, and over 20 people have it in their carts.
         </span>
       </div>
       <div className="flex py-2">
         <FaTruckMoving size="1.5rem" />
         <span className="pl-2">Hooray! This item ships free to the US.</span>
+      </div>
       </div>
     </div>
   );

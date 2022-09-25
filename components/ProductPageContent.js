@@ -1,3 +1,5 @@
+
+import React, { Suspense, useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import ProductForm from "./ProductForm";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,8 +9,15 @@ import ProductOptions from "./ProductOptions";
 import ProductReviews from "./ProductReviews";
 import Hero from "./Hero";
 
+
+
+ 
+
+
+
 export default function ProductPageContent({ product }) {
   const images = [];
+  console.log(product);
 
   product.images.edges.map((image, i) => {
     images.push(
@@ -52,14 +61,15 @@ export default function ProductPageContent({ product }) {
           <ProductForm product={product} />
         </div>
         <div
-          
           className="dis z-40 colornav"
         >
-          <p className=" mt-10 p-10 relative space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl rounder-md border-2 w-11/12 mx-auto text-white colornav z-20 ">
+          <div className="trigger-add-to-cart mt-10 p-5 relative space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl rounded-2xl border-2 w-11/12 mx-auto text-white colornav z-20 ">
+            <div>Description</div>
+            <div>
             {product.description}
-          </p>
+            </div>
+          </div>
         </div>
-
         <RecommendedList
           current={product.id}
           products={product.collections.edges[0].node.products.edges}

@@ -35,25 +35,27 @@ export default function FrontPage() {
 
   return (
     <>
-    <div className=" sm:block hidden">
-      <div className="desktop "></div>
-      <div className="deskbottomright"></div>
-      <div className="desktopleft"></div>
-      <div className="deskbottomleft"></div>
-    </div>
-    <div className="sm:hidden block ">
-      <div className="mobiletop"></div>
-      <div className="mobilemiddle"></div>
-      <div className="mobilebottom"></div>
-    </div>
+   
+ 
     <div id="mark"
       style={{ height: "100vh", width: "100%"}}
-      className="text-white flex justify-center md:flex md:flex-row md:justify-center overflow-hidden relative align-middle items-center "
+      className="relative"
     >
-      <div className="happy">
+       <div className=" sm:block hidden">
+        <div className="desktop "></div>
+        <div className="deskbottomright"></div>
+        <div className="desktopleft"></div>
+        <div className="deskbottomleft"></div>
+      </div>
+      <div className="sm:hidden block ">
+        <div className="mobiletop"></div>
+        <div className="mobilemiddle"></div>
+        <div className="mobilebottom"></div>
+      </div>
+      <div className="happy-halloween">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="spooky mt-24 md:mt-0 text-4xl md:text-6xl font-bold text-center">
+            <h1 className="spooky mr-10 mt-24 md:mr-56 md:mt-0 text-4xl md:text-6xl font-bold text-center">
               <span className="">Happy</span> <br />
               <span className="">Halloween</span> <br />
             </h1>

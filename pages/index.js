@@ -32,7 +32,7 @@ export default function Home({ products, collections, necklaces, rings, earrings
   return (
     <div className="relative body ">
       <Head>
-        <title>Tataroski</title>
+        <title>HalloPain</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           httpEquiv="Content-Type"
@@ -60,7 +60,7 @@ export default function Home({ products, collections, necklaces, rings, earrings
           on Earth because it is a reference to the UNIQUENESS of everything."
         />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Tataroski" />
+        <meta property="og:site_name" content="HalloPain" />
 
         <link
           href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"

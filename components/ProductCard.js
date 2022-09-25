@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
         <a className="group pb-8 ">
           <motion.div
             variants={fadeInUp}
-            className="w-full rounded-2xl overflow-hidden"
+            className="w-46 rounded-md overflow-hidden"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >

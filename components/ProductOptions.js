@@ -34,7 +34,7 @@ export default function ProductOptions({
               <div
                 className={`p-2 mt-3 text-lg rounded-full block cursor-pointer mr-3 ${
                   checked
-                    ? "text-white bg-gray-900"
+                    ? "text-white bg-green-500"
                     : "text-gray-900 bg-gray-200"
                 }`}
               >
