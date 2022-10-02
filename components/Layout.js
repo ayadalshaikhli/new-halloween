@@ -126,12 +126,13 @@ export default function Layout({ children }) {
           background-size: 50%;
           background-position: top;
           position: absolute;
-          height: 100vh;
-          width: 100%;
+          height: 100%;
+          width: 70%;
           top: 70%;
           left: 60%;
           transform: translate(-50%, -50%);
           z-index: -1;
+          
         }
        
         .mobilebottom{
