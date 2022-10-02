@@ -21,19 +21,20 @@ export default function Nav() {
     cartTotal += item?.variantPrice * item?.variantQuantity;
   });
 
-  if (cartTotal >= 35) {
+  if (cartTotal >= 50) {
     var Good = "Congratulations! We pay shipping!";
   } else {
-    var shippingaway = Math.round(35 - cartTotal);
+    var shippingaway = Math.round(50 - cartTotal);
     var free = "You're only" + " $" + shippingaway + " from free shipping";
   }
 
   useEffect(() => {
     const showAnim = gsap
       .from(".nav-main", {
-        yPercent: -200,
+        yPercent: -300,
         paused: true,
         duration: 0.2,
+        opacity: 0,
       })
       .progress(1);
 
