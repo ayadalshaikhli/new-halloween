@@ -185,7 +185,7 @@ export default function contect() {
         <div className="shipping__title p-10 text-lg font-bold a">
           Contact Us
         </div>
-        <div className=" sm:w-1/2 text-center bg-gray-800/75 rounded-md  ">
+        <div className=" sm:w-1/2 text-center  rounded-md  ">
           We're here to help! Send us a message and we'll get back to you within
           48 hours. <br /> Please note that we are currently experiencing a
           higher than normal volume of customer inquiries and may require 3-5
@@ -193,7 +193,7 @@ export default function contect() {
           <br /> We have temporarily closed our phone lines to speed up email
           response times. <br /> We thank you for your patience and
           understanding during this time and apologize for any inconvenience.
-          <br /> Please contact us at tataroskijewelry@gmail.com with us.
+          <br /> Please contact us at hallowpainstore@gmail.com with us.
           <br /> Kindly provide as much information as you can for our team to
           assist you better.
         </div>

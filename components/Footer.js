@@ -7,7 +7,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-import { FaPlus, FaAngleRight } from "react-icons/fa";
+import { FaPlus, } from "react-icons/fa";
 export default function Footer() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [showMe, setShowMe] = useState(false);
@@ -37,29 +37,36 @@ export default function Footer() {
           }}
           className="md:hidden"
         >
-          <h1 className="flex justify-between items-center">
-            Need help?
-            <FaAngleRight />
-          </h1>
-          <h1 className="flex justify-between items-center">
-            About Us
-            <FaAngleRight />
-          </h1>
-          <h1 className="flex justify-between items-center">
-            Carriers
-            <FaAngleRight />
-          </h1>
-          <h1 className="flex justify-between items-center">
-            Countries
-            <FaAngleRight />
-          </h1>
+          <div>
+            <Link href="/info/about">
+              <a className="cursor-pointer ">
+                <span className="md:text-3xl  px-2  sm:px-4">About</span>
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/info/contact">
+              <a className="cursor-pointer ">
+                <span className="md:text-3xl  px-2  sm:px-4">Contact</span>
+              </a>
+            </Link>
+          </div>
         </div>
-        <div className="hidden md:block">Service and help </div>
-        <div className="hidden md:block">
-          <h1>Need help?</h1>
-          <h1>About Us</h1>
-          <h1>Carriers</h1>
-          <h1>Countries</h1>
+        <div className="hidden md:flex">
+          <div>
+            <Link href="/info/about">
+              <a className="cursor-pointer ">
+                <span className="md:text-3xl  px-2  sm:px-4">About</span>
+              </a>
+            </Link>
+          </div>
+          <div>
+            <Link href="/info/contact">
+              <a className="cursor-pointer ">
+                <span className="md:text-3xl  px-2  sm:px-4">Contact</span>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
